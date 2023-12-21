@@ -46,7 +46,7 @@ addEventListener("mousemove", function (event) {
 });
 
 const downloadPDF = () => {
-    var pdfFilePath = '../Assets/Resume.pdf';
+    var pdfFilePath = 'Assets/Resume.pdf';
     var link = document.createElement('a');
     link.href = pdfFilePath;
     link.download = 'tejas_chavan_resume.pdf';
