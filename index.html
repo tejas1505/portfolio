@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Assets/favicon.ico" type="image/x-icon">
+    <meta property="Tejas Chavan" content="Tejas Chavan - Full Stack Web Developer">
+    <meta property="Personal portfolio website" content="Explore the web developer portfolio of Tejas Chavan. Check out projects, skills, and more.">
+    <meta name="description" content="Web developer portfolio of Tejas Chavan. Explore projects, skills, and more.">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://kit.fontawesome.com/4c9a69fe6a.js" crossorigin="anonymous"></script>
+    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Tejas Chavan - Portfolio</title>
+    <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <ul class="ul1">
+            <li class="logo"><img height="100" width="100" src="./Assets/tejas_logo-removebg-preview.png" alt="logo">
+            </li>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="toggleNav()"
+            style="color: #52f3ff;position: absolute; top: 30px; right: 40px;"></i>
+        <ul class="ul2">
+            <li class="item"><a href="#sec1">start</a></li><span class="dividers">≥</span>
+            <li class="item"><a href="#sec2">projects</a></li><span class="dividers">≥</span>
+            <li class="item"><a href="#sec3">skills</a></li><span class="dividers">≥</span>
+            <li class="item"><a href="#sec4">about</a></li><span class="dividers">≥</span>
+            <li class="item"><a href="#sec5">contact</a></li>
+        </ul>
+        <ul id="ul2" style="display: none;">
+            <li class="item"><a href="#sec1" onclick="toggleNav()">start</a></li>
+            <li class="item"><a href="#sec2" onclick="toggleNav()">projects</a></li>
+            <li class="item"><a href="#sec3" onclick="toggleNav()">skills</a></li>
+            <li class="item"><a href="#sec4" onclick="toggleNav()">about</a></li>
+            <li class="item"><a href="#sec5" onclick="toggleNav()">contact</a></li>
+        </ul>
+    </nav>
+    <div class="curtain-1">
+        <div class="curt1-line1"></div>
+        <h1>Let's</h1>
+    </div>
+    <div class="curtain-2">
+        <h1>Go</h1>
+        <div class="curt2-line1"></div>
+    </div>
+    <section class="sec1" id="sec1">
+        <div class="sec1-div1">
+            <h1 class="h1-name" data-aos="fade-right" data-replace="Engineer">
+                Hi, I am <span class="name">Tejas Chavan</span>
+            </h1>
+            <h2>
+                <span class="fancy" id="fancy">Web Developer</span>
+            </h2>
+            <p class="tagline">Likes to work on full stack technologies, enjoys challenges, always curious to know how
+                technologies
+                really works.</p>
+            <button class="download" id="download" onclick="downloadPDF()">Download Resume</button>
+        </div>
+        <div class="sec1-div2">
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+        </div>
+    </section>
+    <div data-aos="fade-down" class="divider" id="sec2"><span class="line"></span> <button data-aos="fade-down"
+            data-aos-delay="500" class="divider-btn">projects</button><span data-aos="fade-down" data-aos-delay="1000"
+            class="line"></span></div>
+    <section class="sec2">
+        <div class="card" data-aos="fade-right" data-aos-duration="1000" name="card_1">
+            <img src="./Assets/agrocon.png" width="auto" alt="" srcset="">
+            <h2 class="card-title">Agrocon Net System (05/2022 - 07/2023)</h2>
+            <p class="card-desc" id="card_1">AgroNet System, our advanced Final Year Project, employs the Django
+                Framework alongside IoT and Arduino coding. This cutting-edge web application redefines Smart Farming in
+                polyhouses, providing farmers with real-time control and monitoring using an array of sensors. By
+                seamlessly integrating technology, AgroNet System represents a forward-thinking approach to agriculture,
+                offering precise insights for optimal plant growth and resource utilization. This project underscores
+                the potential of modern technology to revolutionize farming practices, making it more efficient,
+                data-driven, and sustainable.</p>
+            <div class="card-footer"><button class="footer-btn" onclick="readMore(this)">Read more...</button></div>
+        </div>
+        <div class="card" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" name="card_2">
+            <img src="./Assets/chat.png" width="auto" alt="" srcset="">
+            <h2 class="card-title">Simple Chat App (07/2021 - 08/2021)</h2>
+            <p class="card-desc" id="card_2">The Node.js and Socket.io-powered Chat App represents a dynamic platform
+                for real-time communication. Currently in its initial phase, the application features a streamlined
+                one-to-one communication system. Leveraging the power of Node.js for a sturdy backend foundation and
+                Socket.io for enabling instantaneous bidirectional communication, the app ensures a responsive and
+                interactive user experience. As the development progresses, the focus remains on refining and perfecting
+                the one-to-one communication feature. Each detail is meticulously addressed to meet and exceed user
+                satisfaction. The commitment to simplicity serves as a deliberate design choice, allowing for a
+                user-friendly interface and a seamless chat experience.</p>
+            <div class="card-footer"><button class="footer-btn" onclick="readMore(this)">Read more...</button></div>
+        </div>
+        <!-- <div class="card" name="card_3">
+            <img src="./Assets/notesapp.png" width="auto" alt="" srcset="">
+            <h2 class="card-title">Poster & Video Generator (10/2023 - 12/2023)</h2>
+            <p class="card-desc" id="card_3">This project, built with the MERN stack (MySQL, Node.js, ExpressJS, ReactJS), is a user-friendly poster-making platform. Users can effortlessly upload images, placing them within stylish poster frames. Additionally, the application supports the merging of videos into posters, creating dynamic multimedia compositions. Upon completion, users can easily download their personalized posters. The backend, powered by Node.js and ExpressJS, ensures seamless server-side operations, while ReactJS delivers a smooth and intuitive frontend experience.</p>
+            <div class="card-footer"><button class="footer-btn" onclick="readMore(this)">Read more...</button></div>
+        </div> -->
+    </section>
+    <div data-aos="fade-down" class="divider" id="sec2"><span class="line"></span> <button data-aos="fade-down"
+            data-aos-delay="500" class="divider-btn">skills</button><span data-aos="fade-down" data-aos-delay="1000"
+            class="line"></span></div>
+    <section class="sec3">
+        <div class="sec3-div1">
+            <img data-aos="zoom-in" src="Assets/python.png" alt="Python" class="logo">
+            <img data-aos="zoom-in" src="Assets/Django.png" alt="Django" class="logo">
+            <img data-aos="zoom-in" src="Assets/Nodejs.png" alt="Nodejs" class="logo">
+            <img data-aos="zoom-in" src="Assets/React.png" alt="React" class="logo">
+            <img data-aos="zoom-in" src="Assets/Mysql.png" alt="Mysql" class="logo">
+            <img data-aos="zoom-in" src="Assets/MERN.png" alt="MERN" class="logo">
+            <img data-aos="zoom-in-left" src="Assets/Mongo.png" alt="Mongo" class="logo">
+            <img data-aos="zoom-in" src="Assets/Linux.png" alt="Linux" class="logo">
+            <img data-aos="zoom-in" src="Assets/SQL.png" alt="SQL" class="logo">
+        </div>
+    </section>
+    <div class="divider" id="sec4"><span data-aos="fade-down" class="line"></span> <button data-aos="fade-down"
+            data-aos-delay="500" class="divider-btn">about</button><span data-aos="fade-down" data-aos-delay="1000"
+            class="line"></span></div>
+    <section class="sec4">
+        <div class="sec4-div1" data-aos="zoom-out-down" data-aos-duration="700">
+            <h2>Internship</h2>
+            <h4>Web Developer Intern</h4>
+            <h4 style="font-weight: 300; font-size: 20px;">Embedsol Technologies LLP</h4>
+            <p>09/2022 - 03/2023</p>
+            <h6>Achievements/Tasks</h6>
+            <ul class="sec4-ul">
+                <li class="sec4-li">Learned some backend work like database designing using MySQL. </li>
+                <li class="sec4-li">Explored Node JS backend connectivity and also worked with
+                    Express JS. </li>
+                <li class="sec4-li">PWA (Progressive Web App) - Created a Web Application and
+                    made it suitable for installing a web application on Mobile as
+                    well as desktop. </li>
+                <li class="sec4-li">Explored about ReactJs and NextJs.
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="sec4-main">
+            <div class="sec4-div2" data-aos="zoom-in-right" data-aos-duration="500" data-aos-delay="500">
+                <h2>Education</h2>
+                <h4>BE (Computer)</h4>
+                <h4 style="font-weight: 300; font-size: 20px;">Anantrao Pawar College of Engineering and Research, Pune
+                </h4>
+                <p>08/2019 - 07/2023</p>
+                <h6>CGPA - 8.81</h6>
+            </div>
+            <div class="sec4-div2" data-aos="zoom-in-right" data-aos-duration="500" data-aos-delay="1000">
+                <h4>Higher Secondary Certificate</h4>
+                <h4 style="font-weight: 300; font-size: 20px;">P.V.G' s Muktangan Jr. College, Pune</h4>
+                <p>06/2018 - 05/2019</p>
+                <h6>Percentage - 60%</h6>
+            </div>
+            <div class="sec4-div2" data-aos="zoom-in-right" data-aos-duration="500" data-aos-delay="1500">
+                <h4>Secondary School Certificate</h4>
+                <h4 style="font-weight: 300; font-size: 20px;">S.D. Katariya High School, Pune</h4>
+                <p>06/2016 - 04/2017</p>
+                <h6>Percentage - 75%</h6>
+            </div>
+        </div>
+    </section>
+    <div data-aos="fade-down" class="divider" id="sec2"><span class="line"></span> <button data-aos="fade-down"
+            data-aos-delay="500" class="divider-btn">contact</button><span data-aos="fade-down" data-aos-delay="1000"
+            class="line"></span></div>
+    <section class="sec5">
+        <h2>Let's Have a Talk</h2>
+        <div class="sec5-main">
+            <div data-aos="fade-up" data-aos-delay="500" class="icons"
+                onclick="window.location.href = 'mailto:tejaschavan0501@gmail.com'">
+                <a><i class="fa-solid fa-envelope" style="color: white; font-size: 26px;"></i><span>Email</span></a>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="1000" class="icons">
+                <a href="https://github.com/tejas1505"><i class="fa-brands fa-github"
+                        style="color: white;font-size: 26px;"></i><span>Github</span></a>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="1500" class="icons">
+                <a href="http://www.linkedin.com/in/tejaschavan15"><i class="fa-brands fa-linkedin"
+                        style="color: white;font-size: 26px;"></i><span>LinkedIn</span></a>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="2000" class="icons">
+                <a href="https://www.instagram.com/tejas_chavan_15"><i class="fa-brands fa-square-instagram"
+                        style="color: #ffffff;font-size: 26px;"></i><span>Instagram</span></a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form>
+                <input type="text" name="name" id="name" placeholder="Your Name">
+                <input type="email" name="email" id="email" placeholder="Your Email">
+                <textarea name="message" id="message" placeholder="Your message"></textarea>
+                <button type="submit" class="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
