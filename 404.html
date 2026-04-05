@@ -6,12 +6,14 @@
   <title>Tejas Chavan — Portfolio</title>
   <!-- SPA redirect: preserves the path so React Router works on GH Pages -->
   <script>
-    // Encode the full URL path and redirect to index.html with it as a query param
+    // SPA redirect for GitHub Pages with a sub-path base (e.g. /portfolio/)
+    // Strips the repo prefix then encodes remaining path as query param
     var l = window.location;
+    var base = '/portfolio'; // must match vite.config.ts `base` (no trailing slash)
+    var path = l.pathname.startsWith(base) ? l.pathname.slice(base.length) : l.pathname;
     l.replace(
       l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-      l.pathname.split('/').slice(0, 1).join('/') +
-      '/?p=' + encodeURIComponent(l.pathname.slice(1) + l.search) +
+      base + '/?p=' + encodeURIComponent(path.slice(1) + l.search) +
       (l.hash || '')
     );
   </script>

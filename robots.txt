@@ -15,7 +15,7 @@ Disallow: /_vite/
 # Crawl-delay: 1
 
 # Sitemap location — update with your actual domain
-Sitemap: https://tejaschavan.dev/sitemap.xml
+Sitemap: https://tejas1505.github.io/portfolio/sitemap.xml
 
 # Google
 User-agent: Googlebot
