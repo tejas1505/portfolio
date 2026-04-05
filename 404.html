@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tejas Chavan — Portfolio</title>
+  <!-- SPA redirect: preserves the path so React Router works on GH Pages -->
+  <script>
+    // Encode the full URL path and redirect to index.html with it as a query param
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1).join('/') +
+      '/?p=' + encodeURIComponent(l.pathname.slice(1) + l.search) +
+      (l.hash || '')
+    );
+  </script>
+</head>
+<body>Redirecting...</body>
+</html>
