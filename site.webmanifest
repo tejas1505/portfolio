@@ -1,0 +1,16 @@
+{
+  "name": "Tejas Chavan — Full Stack Developer",
+  "short_name": "TC Portfolio",
+  "description": "Full Stack Developer in Pune specialising in React, Node.js and MERN stack.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050508",
+  "theme_color": "#6366f1",
+  "lang": "en-IN",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/web-app-manifest-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/web-app-manifest-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "categories": ["portfolio", "technology", "developer"]
+}
